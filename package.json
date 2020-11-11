@@ -1,0 +1,16 @@
+{
+  "name": "gh-conversations",
+  "version": "1.0.0",
+  "description": "Webhook management for Github PR comments/discussions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint-config-makespace": "^1.0.3",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2"
+  }
+}
