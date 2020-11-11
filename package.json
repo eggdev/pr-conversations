@@ -4,7 +4,7 @@
   "description": "Webhook management for Github PR comments/discussions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
