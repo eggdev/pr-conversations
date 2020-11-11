@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['makespace/configurations/node'],
+  extends: ["eslint-config-airbnb"],
 };
