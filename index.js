@@ -15,12 +15,21 @@ app.use(
 
 const port = process.env.PORT || 5000;
 
-app.post("/slack-hooks", async (req) => {
+app.post("/slack-hooks", async (req, res) => {
   const { body } = req;
-  console.log(body);
-  //   await webhook.send({
-  //       text:
-  //   })
+  const { comment, repository, pull_request } = body;
+  await webhook.send({
+    blocks: [
+      {
+        type: "section",
+        text: {
+          type: "mrkdwn",
+          text: `New Comment in <${comment.html_url}|${repository.name}#${pull_request.number}>`,
+        },
+      },
+    ],
+  });
+  return res.json(body);
 });
 
 app.listen(port, () => {});
